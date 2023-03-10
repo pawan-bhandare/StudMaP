@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> {% block title %}
+
+        {% endblock title %} StudMap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!--NavBar Start here-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
+        <div class="container-fluid">
+           <div class="ms-5"> <a class="navbar-brand font-monospace fst-italic fs-4 fw-bolder ms-5 ps-3 pe-3 bg-gradient border-1 "
+                href="/">StudMap</a> </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse fw-bold fs-5" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="/notes">Notes</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="/paper">Papers</a>
+                    </li>
+
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Cheatsheet
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="/cppch">C++</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/javach">Java</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/pythonch">Python</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="/cpp">C++</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/java">Java</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/python">Python</a>
+                            </li>
+                        </ul>
+                    </li>
+                   
+
+
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="/about">About us</a>
+                    </li>
+
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="/contact">Contact us</a>
+                    </li>
+
+                </ul>
+              <!--  <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
+            </div>
+        </div>
+    </nav>
+    <!--NavBar End Here-->
+    {% block body %}
+
+    {% endblock body %}
+    <!--Footer Start here-->
+    <footer class="bg-light text-center text-lg-start">
+
+        <div>
+            
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 Copyright:
+            <a class="text-dark" href="/">StudMap</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <!--Footer End Here -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
