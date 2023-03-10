@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from datetime import datetime
-from django.http import HttpResponse
-#from smap.models import contact
+from smap.models import Contact,Note
+from django.contrib import messages
+
 
 
 # Create your views here.
@@ -14,6 +15,14 @@ def about(request):
 
 
 def contact(request):
+    if request.method =="POST":
+        name =request.POST.get('name')
+        email =request.POST.get('email')
+        phone =request.POST.get('phone')
+        desc =request.POST.get('desc')
+        contact =Contact(name=name,email=email,phone=phone,desc=desc,date=datetime.today())
+        contact.save()
+        messages.success(request,'Your message has been sent')
     return render(request, 'contct.html')
 
 
@@ -22,7 +31,11 @@ def code(request):
 
 
 def note(request):
-    return render(request, 'notes.html')
+    notes= Note.objects.all()
+    n= len(notes)
+    nSlides= n//4 + ceil((n/4) + (n//4))
+    params={'no_of_slides':nSlides, 'range':range(1,nSlides), 'notes': notes}
+    return render(request, 'notes.html',params)
 
 
 def cpp(request):
